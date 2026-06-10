@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumenform — A Creative AI Studio</title>
+  <meta name="description" content="Lumenform is a creative AI studio shaping light into form — generative film, identity, and interactive worlds, art-directed by humans, rendered by machines." />
+  <meta property="og:title" content="Lumenform — A Creative AI Studio" />
+  <meta property="og:description" content="We teach machines taste. Generative film, identity and interactive worlds." />
+  <meta property="og:image" content="assets/img/og.jpg" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-loading>
+
+  <!-- ░ preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <span class="loader__glyph"></span>
+      <span class="loader__word">Lumenform</span>
+    </div>
+    <div class="loader__count"><span id="loaderCount">00</span></div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- ░ cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label" id="cursorLabel"></span></div>
+  </div>
+
+  <!-- ░ header -->
+  <header class="site-head" id="siteHead">
+    <a class="site-head__brand" href="#top" data-scroll-to>
+      <span class="brand-glyph" aria-hidden="true"></span>
+      <span class="brand-word">Lumenform</span>
+    </a>
+    <nav class="site-head__nav" aria-label="Primary">
+      <a href="#work" data-scroll-to>Work</a>
+      <a href="#studio" data-scroll-to>Studio</a>
+      <a href="#capabilities" data-scroll-to>Capabilities</a>
+      <a href="#contact" data-scroll-to>Contact</a>
+    </nav>
+    <button class="site-head__cta" data-magnetic data-scroll-to data-href="#contact">Start a project</button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ░ mobile nav -->
+  <nav class="mnav" id="mobileNav" aria-label="Mobile" aria-hidden="true">
+    <div class="mnav__inner">
+      <a href="#work" data-scroll-to><em>01</em>Work</a>
+      <a href="#studio" data-scroll-to><em>02</em>Studio</a>
+      <a href="#capabilities" data-scroll-to><em>03</em>Capabilities</a>
+      <a href="#contact" data-scroll-to><em>04</em>Contact</a>
+    </div>
+    <p class="mnav__foot">hello@lumenform.studio</p>
+  </nav>
+
+  <!-- ░ page -->
+  <div class="smooth" id="smooth">
+    <main id="top">
+
+      <!-- ═══ HERO ═══ -->
+      <section class="hero" id="hero">
+        <canvas class="hero__gl" id="glcanvas" aria-hidden="true"></canvas>
+        <div class="hero__haze" aria-hidden="true"></div>
+
+        <div class="hero__stage">
+          <p class="hero__kicker" data-reveal>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Creative AI Studio — est. 2023
+          </p>
+          <h1 class="hero__title" aria-label="Lumenform">
+            <span class="hero__line" data-split>LUMEN</span>
+            <span class="hero__line hero__line--offset" data-split>FORM</span>
+          </h1>
+          <div class="hero__deck">
+            <p class="hero__tag" data-reveal data-reveal-delay="600">
+              We teach machines taste — shaping light into film,
+              identity&nbsp;and living, breathing worlds.
+            </p>
+            <div class="hero__meta" data-reveal data-reveal-delay="750">
+              <span>Generative Film</span>
+              <span>Visual Identity</span>
+              <span>Interactive &amp; Spatial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__foot">
+          <span class="hero__scrollcue" aria-hidden="true">
+            <span class="hero__scrollline"></span>Scroll
+          </span>
+          <span class="hero__coords">52.3676° N&nbsp;&nbsp;4.9041° E — AMS</span>
+        </div>
+      </section>
+
+      <!-- ═══ MARQUEE ═══ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Light into form — Generative film — Identity systems — Realtime worlds —&nbsp;</span>
+          <span>Light into form — Generative film — Identity systems — Realtime worlds —&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- ═══ MANIFESTO ═══ -->
+      <section class="manifesto" id="studio">
+        <p class="eyebrow" data-reveal><i>01</i> Studio</p>
+        <p class="manifesto__text" id="manifestoText">
+          Lumenform is a studio where human art direction meets
+          generative systems. We train models on intent, not noise —
+          so every frame we ship feels inevitable, not accidental.
+          The machine renders. We decide what deserves to exist.
+        </p>
+        <div class="manifesto__poster" data-parallax="0.16" data-reveal>
+          <img src="assets/img/poster-nebula.jpg" alt="A warm form of light unfolding through darkness — generated in-house" loading="lazy" />
+          <figcaption class="manifesto__cap">Field study №7 — rendered by our in-house pipeline</figcaption>
+        </div>
+        <div class="stats" id="stats">
+          <div class="stat" data-reveal><strong data-count="120" data-suffix="+">0</strong><span>projects shipped</span></div>
+          <div class="stat" data-reveal data-reveal-delay="80"><strong data-count="14">0</strong><span>international awards</span></div>
+          <div class="stat" data-reveal data-reveal-delay="160"><strong data-count="8">0</strong><span>model pipelines</span></div>
+          <div class="stat" data-reveal data-reveal-delay="240"><strong data-count="3">0</strong><span>continents, one studio</span></div>
+        </div>
+      </section>
+
+      <!-- ═══ WORK ═══ -->
+      <section class="work" id="work">
+        <header class="work__head">
+          <p class="eyebrow" data-reveal><i>02</i> Selected work</p>
+          <h2 class="work__title" data-reveal>Five fields<br /><em>of light</em></h2>
+        </header>
+
+        <ul class="work__list">
+          <li class="card" data-reveal>
+            <a class="card__media" href="#contact" data-scroll-to data-cursor="View">
+              <img src="assets/img/work-aurelia.jpg" alt="Aurelia — molten gold light streams" data-parallax-img loading="lazy" />
+              <span class="card__index" aria-hidden="true">№ 01</span>
+            </a>
+            <div class="card__info">
+              <h3>Aurelia</h3>
+              <p>A generative brand film for a couture house — silk trained on fire.</p>
+              <div class="card__tags"><span>Direction</span><span>AI Film</span><span>2025</span></div>
+            </div>
+          </li>
+
+          <li class="card card--right" data-reveal>
+            <a class="card__media" href="#contact" data-scroll-to data-cursor="View">
+              <img src="assets/img/work-ion.jpg" alt="Ion Field — electric cyan filaments" data-parallax-img loading="lazy" />
+              <span class="card__index" aria-hidden="true">№ 02</span>
+            </a>
+            <div class="card__info">
+              <h3>Ion Field</h3>
+              <p>A realtime visual identity for a quantum computing lab.</p>
+              <div class="card__tags"><span>Identity</span><span>Realtime</span><span>2025</span></div>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <a class="card__media" href="#contact" data-scroll-to data-cursor="View">
+              <img src="assets/img/work-terra.jpg" alt="Terra — topographic contour etching" data-parallax-img loading="lazy" />
+              <span class="card__index" aria-hidden="true">№ 03</span>
+            </a>
+            <div class="card__info">
+              <h3>Terra</h3>
+              <p>Procedural cartography for an expedition archive — 40,000 maps, one system.</p>
+              <div class="card__tags"><span>Data Art</span><span>Print</span><span>2024</span></div>
+            </div>
+          </li>
+
+          <li class="card card--right" data-reveal>
+            <a class="card__media" href="#contact" data-scroll-to data-cursor="View">
+              <img src="assets/img/work-bloom.jpg" alt="Bloom — violet chromatic glass" data-parallax-img loading="lazy" />
+              <span class="card__index" aria-hidden="true">№ 04</span>
+            </a>
+            <div class="card__info">
+              <h3>Bloom</h3>
+              <p>Latent-space botany — an installation that grows what no garden can.</p>
+              <div class="card__tags"><span>Installation</span><span>Interactive</span><span>2024</span></div>
+            </div>
+          </li>
+
+          <li class="card" data-reveal>
+            <a class="card__media" href="#contact" data-scroll-to data-cursor="View">
+              <img src="assets/img/work-meridian.jpg" alt="Meridian — green aurora columns" data-parallax-img loading="lazy" />
+              <span class="card__index" aria-hidden="true">№ 05</span>
+            </a>
+            <div class="card__info">
+              <h3>Meridian</h3>
+              <p>Aurora simulations for a planetarium dome — physics, art-directed.</p>
+              <div class="card__tags"><span>Simulation</span><span>Dome Film</span><span>2023</span></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ═══ CAPABILITIES ═══ -->
+      <section class="caps" id="capabilities">
+        <p class="eyebrow" data-reveal><i>03</i> Capabilities</p>
+        <ul class="caps__list">
+          <li class="caprow" data-reveal data-preview="assets/img/preview-a.jpg">
+            <span class="caprow__num">A</span>
+            <h3>Generative Film</h3>
+            <p>Trailers, brand films and title sequences grown from custom-trained models.</p>
+          </li>
+          <li class="caprow" data-reveal data-preview="assets/img/preview-b.jpg">
+            <span class="caprow__num">B</span>
+            <h3>Visual Identity</h3>
+            <p>Living identity systems that render themselves — endlessly, on-brand.</p>
+          </li>
+          <li class="caprow" data-reveal data-preview="assets/img/preview-c.jpg">
+            <span class="caprow__num">C</span>
+            <h3>Interactive &amp; Realtime</h3>
+            <p>Shader-driven sites, configurators and worlds that answer the cursor.</p>
+          </li>
+          <li class="caprow" data-reveal data-preview="assets/img/preview-d.jpg">
+            <span class="caprow__num">D</span>
+            <h3>Spatial &amp; Installation</h3>
+            <p>Domes, façades and rooms of light — simulation at architectural scale.</p>
+          </li>
+        </ul>
+        <div class="caps__preview" id="capsPreview" aria-hidden="true"><img src="assets/img/preview-a.jpg" alt="" /></div>
+      </section>
+
+      <!-- ═══ PROCESS ═══ -->
+      <section class="process" id="process">
+        <p class="eyebrow" data-reveal><i>04</i> Process</p>
+        <div class="process__stack">
+          <article class="step" style="--i:0">
+            <span class="step__num">01</span>
+            <h3>Listen</h3>
+            <p>Every engagement starts as anthropology, not prompts. We sit with your brand until we can finish its sentences.</p>
+          </article>
+          <article class="step" style="--i:1">
+            <span class="step__num">02</span>
+            <h3>Train</h3>
+            <p>We build a private model of your world — palettes, motion, light — so the machine dreams in your dialect.</p>
+          </article>
+          <article class="step" style="--i:2">
+            <span class="step__num">03</span>
+            <h3>Direct</h3>
+            <p>Generation is cheap; judgement is not. Our directors curate thousands of frames down to the ones that matter.</p>
+          </article>
+          <article class="step" style="--i:3">
+            <span class="step__num">04</span>
+            <h3>Deliver</h3>
+            <p>Finished film, living identity, or a realtime system your team can run — handed over, documented, supported.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══ CTA / FOOTER ═══ -->
+      <footer class="outro" id="contact">
+        <div class="outro__glow" aria-hidden="true"></div>
+        <p class="eyebrow eyebrow--center" data-reveal><i>05</i> Contact</p>
+        <h2 class="outro__title">
+          <span data-split>Make light</span>
+          <span><em data-split>with us.</em></span>
+        </h2>
+        <a class="outro__btn" href="mailto:hello@lumenform.studio" data-magnetic data-cursor="Say hi">
+          hello@lumenform.studio
+        </a>
+        <div class="outro__grid">
+          <div>
+            <h4>Studio</h4>
+            <p>Keizersgracht 482<br />Amsterdam, NL</p>
+          </div>
+          <div>
+            <h4>Elsewhere</h4>
+            <p><a href="#contact" data-scroll-to>Instagram</a><br /><a href="#contact" data-scroll-to>Are.na</a><br /><a href="#contact" data-scroll-to>Vimeo</a></p>
+          </div>
+          <div>
+            <h4>Colophon</h4>
+            <p>Every image on this site was generated by our own procedural pipeline. No stock. No scraping.</p>
+          </div>
+        </div>
+        <div class="outro__base">
+          <span>© 2026 Lumenform BV</span>
+          <span class="outro__big" aria-hidden="true">LUMENFORM</span>
+          <a href="#top" data-scroll-to>Back to top ↑</a>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
