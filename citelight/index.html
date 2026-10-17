@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Citelight Brand Film</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A 45-second motion piece for Citelight, the agency that tracks every time AI assistants cite your brand.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 140'%3E%3Crect width='160' height='140' rx='28' fill='%2304061a'/%3E%3Cpath d='M52 24H30v92h22M108 24h22v92h-22' fill='none' stroke='%23eef1fb' stroke-width='14'/%3E%3Ccircle cx='80' cy='70' r='15' fill='%23ffe45e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112.5,100..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
+<link rel="stylesheet" href="css/film.css">
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <header class="top">
+    <div class="top__id">
+      <svg class="top__mark" viewBox="0 0 160 140" aria-hidden="true"><path d="M48 14H18v112h30M112 14h30v112h-30" fill="none" stroke="currentColor" stroke-width="14"/><circle cx="80" cy="70" r="17" fill="var(--signal)"/></svg>
+      <span class="top__name">Citelight</span>
+      <span class="top__meta">Brand film <span aria-hidden="true">·</span> 0:45</span>
+    </div>
+    <div class="seg" role="group" aria-label="Aspect ratio">
+      <button type="button" id="fmtLandscape" data-format="landscape" aria-pressed="true">16:9</button>
+      <button type="button" id="fmtPortrait" data-format="portrait" aria-pressed="false">9:16</button>
+    </div>
+  </header>
+
+  <main class="screen" id="screen">
+    <div class="frame" id="frame">
+      <div class="stage" id="stage" data-format="landscape" aria-hidden="true">
+
+        <canvas class="cv" id="bg"></canvas>
+
+        <div class="layer">
+
+          <!-- 1 · A customer asks an AI assistant -->
+          <section class="scene sq" id="sQuery">
+            <div class="sq-cam" id="sqCam">
+              <div class="sq-pill" id="sqPill">
+                <svg class="spark" viewBox="0 0 24 24"><path d="M12 1.5c.6 5.6 4.9 9.9 10.5 10.5-5.6.6-9.9 4.9-10.5 10.5C11.4 16.9 7.1 12.6 1.5 12 7.1 11.4 11.4 7.1 12 1.5Z" fill="currentColor"/></svg>
+                <div class="sq-input"><span class="sq-typed" id="sqTyped"></span><span class="caret" id="sqCaret"></span></div>
+                <div class="sq-send" id="sqSend"><svg viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              </div>
+              <div class="sq-answer" id="sqAnswer">
+                <div class="sq-label" id="sqLabel">
+                  <svg class="spark" viewBox="0 0 24 24"><path d="M12 1.5c.6 5.6 4.9 9.9 10.5 10.5-5.6.6-9.9 4.9-10.5 10.5C11.4 16.9 7.1 12.6 1.5 12 7.1 11.4 11.4 7.1 12 1.5Z" fill="currentColor"/></svg>
+                  <span class="sq-label__tx">Answer</span>
+                  <span class="sq-label__sh" id="sqShimmer"></span>
+                </div>
+                <p class="sq-prose" id="sqProse"></p>
+                <div class="sq-sources" id="sqSources">
+                  <div class="src"><i class="src__fav" style="--h:#2b4bd6">L</i><span class="src__dom"><b>1</b>ledgerline.co</span><span class="src__ttl">Startup tax &amp; R&amp;D credits</span></div>
+                  <div class="src"><i class="src__fav" style="--h:#2a6f78">N</i><span class="src__dom"><b>2</b>northfieldco.com</span><span class="src__ttl">Flat fees for seed teams</span></div>
+                  <div class="src"><i class="src__fav" style="--h:#6b3fa6">B</i><span class="src__dom"><b>3</b>brightbook.io</span><span class="src__ttl">Multi-state payroll guide</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2 · Search changed -->
+          <section class="scene ss" id="sShift">
+            <div class="ss-links" id="ssLinks">
+              <div class="ss-block" id="ssBlock">
+                <i class="sk sk--a"></i><i class="sk sk--b"></i><i class="sk sk--c"></i>
+                <div class="ss-chips"><span class="chip" id="ssChip1">1</span><span class="chip">2</span><span class="chip">3</span></div>
+              </div>
+            </div>
+            <div class="ss-copy">
+              <div class="ss-pair" id="ssP0">
+                <div class="ss-small" data-split>Search used to be</div>
+                <div class="ss-big" data-split>ten blue links.</div>
+              </div>
+              <div class="ss-pair" id="ssP1">
+                <div class="ss-small" data-split>Now it’s</div>
+                <div class="ss-big" data-split>one answer.</div>
+              </div>
+              <div class="ss-pair" id="ssP2">
+                <div class="ss-small" data-split>And AI decides</div>
+                <div class="ss-big"><span data-split>who gets</span> <span class="hl" id="ssHl"><i class="hl__bg" id="ssHlBg"></i><span class="hl__tx" data-split>cited.</span></span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3 · The mark -->
+          <section class="scene sm" id="sMark">
+            <div class="mk-mark" id="mkMark"><svg viewBox="0 0 160 140"><path class="br br--l" d="M48 14H18v112h30" fill="none" stroke="currentColor" stroke-width="14"/><path class="br br--r" d="M112 14h30v112h-30" fill="none" stroke="currentColor" stroke-width="14"/></svg></div>
+            <div class="mk-copy">
+              <div class="mk-l1" data-split>Citelight tracks every time</div>
+              <div class="mk-l2" data-split>AI cites your brand.</div>
+            </div>
+            <div class="mk-meta" id="mkMeta">6 AI engines · 2,400 prompts · refreshed hourly</div>
+          </section>
+
+          <!-- 4 · The radar -->
+          <section class="scene sr" id="sRadar">
+            <div class="sr-head">
+              <div class="sr-h" data-split>Every engine.</div>
+              <div class="sr-h" data-split>Every prompt.</div>
+              <div class="sr-h sr-h--b" data-split>Every citation.</div>
+            </div>
+            <div class="sr-panel" id="srPanel">
+              <div class="sr-count">
+                <div class="lbl">Citations this month</div>
+                <div class="sr-num" id="srNum">1,249</div>
+                <div class="sr-delta"><span class="up">▲ 412%</span> vs. last quarter</div>
+              </div>
+              <div class="sr-feed">
+                <div class="lbl sr-feed__head"><i class="live"></i>Live citations</div>
+                <div class="sr-rows" id="srRows"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5 · The proof -->
+          <section class="scene sp" id="sProof">
+            <div class="sp-head">
+              <div class="sp-a" data-split>Measure what AI says about you.</div>
+              <div class="sp-b" data-split>Then grow it.</div>
+            </div>
+            <div class="sp-kpis" id="spKpis">
+              <div class="kpi"><div class="kpi__n" data-kpi="0">5.1×</div><div class="kpi__l">more AI citations in 90 days<sup>1</sup></div></div>
+              <div class="kpi"><div class="kpi__n" data-kpi="1">1.8</div><div class="kpi__l">average citation position</div></div>
+              <div class="kpi"><div class="kpi__n" data-kpi="2">38/50</div><div class="kpi__l">priority prompts where you’re cited</div></div>
+            </div>
+            <div class="sp-note" id="spNote"><sup>1</sup> Illustrative results for a sample client.</div>
+          </section>
+
+          <!-- 6 · The brand -->
+          <section class="scene sb" id="sBrand">
+            <div class="sb-lock" id="sbLock">
+              <div class="sb-mark" id="sbMark"><svg viewBox="0 0 160 140"><path class="br br--l" d="M48 14H18v112h30" fill="none" stroke="currentColor" stroke-width="14"/><path class="br br--r" d="M112 14h30v112h-30" fill="none" stroke="currentColor" stroke-width="14"/></svg></div>
+              <div class="sb-word" data-split id="sbWord">citelight</div>
+            </div>
+            <div class="sb-tag" id="sbTag"><span data-split>Be the</span> <span class="hl" id="sbHl"><i class="hl__bg" id="sbHlBg"></i><span class="hl__tx" data-split>source.</span></span></div>
+            <div class="sb-cta" id="sbCta"><span class="sb-url">citelight.ai</span><i></i><span>Book an AI visibility audit</span></div>
+          </section>
+
+        </div>
+
+        <canvas class="cv" id="fx"></canvas>
+        <div class="grain" id="grain"></div>
+        <div class="vignette"></div>
+        <div class="curtain" id="curtain"></div>
+      </div>
+    </div>
+
+    <button type="button" class="bigplay" id="bigPlay" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+      <span>Play film</span>
+    </button>
+  </main>
+
+  <footer class="deck">
+    <button type="button" class="btn btn--icon" id="playBtn" aria-label="Pause">
+      <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>
+    </button>
+    <div class="time" aria-live="off"><span id="tNow">0:00.0</span><span class="time__dur"> / 0:45</span></div>
+    <div class="scrub">
+      <label class="sr-only" for="scrub">Film position</label>
+      <input type="range" id="scrub" min="0" max="45000" step="10" value="0">
+      <div class="scrub__chapters" id="chapters"></div>
+    </div>
+    <button type="button" class="btn btn--sound" id="soundBtn" aria-pressed="false">
+      <svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="m16 9.5 5 5m0-5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a7.8 7.8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span id="soundLbl">Sound off</span>
+    </button>
+    <button type="button" class="btn btn--icon" id="fsBtn" aria-label="Full screen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+    </button>
+  </footer>
+
+  <p class="sr-only" id="script">
+    Film script. A customer asks an AI assistant who the best accounting firm for startups is, and the answer cites three competitors.
+    Search used to be ten blue links. Now it’s one answer. And AI decides who gets cited.
+    Citelight tracks every time AI cites your brand, across 6 AI engines and 2,400 prompts, refreshed hourly.
+    Every engine. Every prompt. Every citation. A radar logs citations as they happen.
+    Measure what AI says about you. Then grow it. AI share of voice climbs from 4% to 31% in twelve weeks.
+    Citelight. Be the source. citelight.ai, book an AI visibility audit.
+  </p>
+</div>
+
+<audio id="score" preload="auto">
+  <source src="audio/score.webm" type="audio/webm">
+  <source src="audio/score.mp3" type="audio/mpeg">
+</audio>
+<script src="js/film.js"></script>
+</body>
+</html>

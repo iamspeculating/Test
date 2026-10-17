@@ -53,3 +53,9 @@ python3 tools/generate_assets.py
 ```
 
 No stock. No scraping.
+
+## Also in this repo
+
+**[`citelight/`](citelight/)** — a 45-second brand film for Citelight, a
+fictional agency that tracks how often AI assistants cite your brand: an
+interactive player plus 16:9 and 9:16 renders with a synthesized score.
